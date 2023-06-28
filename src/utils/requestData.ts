@@ -40,9 +40,9 @@ const getQueryUrl = (city: string | null, lat: string | null, lon: string | null
   const cityQuery = `&q=${city}`
   const latQuery = `&lat=${lat}&lon=${lon}`
   if (city && lat) {
-    return `https://api.openweathermap.org/data/2.5/weather?units=metric${cityQuery}${latQuery}&APPID=3227974f4ec9644ec0f1cae6e61af58b`
+    return `https://api.openweathermap.org/data/2.5/weather?units=metric${cityQuery}${latQuery}&APPID=${process.env.REACT_APP_WEATHERSTACK_API_KEY}`
   } else if (!lat || !lon) {
-    return `https://api.openweathermap.org/data/2.5/weather?units=metric${cityQuery}&APPID=3227974f4ec9644ec0f1cae6e61af58b`
+    return `https://api.openweathermap.org/data/2.5/weather?units=metric${cityQuery}&APPID=${process.env.REACT_APP_WEATHERSTACK_API_KEY}`
   }
-  return `https://api.openweathermap.org/data/2.5/weather?units=metric${latQuery}&APPID=3227974f4ec9644ec0f1cae6e61af58b`
+  return `https://api.openweathermap.org/data/2.5/weather?units=metric${latQuery}&APPID=${process.env.REACT_APP_WEATHERSTACK_API_KEY}`
 }

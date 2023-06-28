@@ -27,7 +27,9 @@ exports[`App should match snapshot 1`] = `
   <main
     class="max-width-inhibitor home-main"
   >
-    <form>
+    <form
+      class="search-form"
+    >
       <input
         class="search-input"
         id="search"

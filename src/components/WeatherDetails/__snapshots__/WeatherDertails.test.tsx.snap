@@ -2,7 +2,9 @@
 
 exports[`Searchbar should match snapshot 1`] = `
 <div>
-  <section>
+  <section
+    class="weather-section"
+  >
     <div
       class="weather-details"
     >
