@@ -3,7 +3,7 @@ import { IWeatherInfo, PromiseFulfilledResult } from "./types"
 export const getCityWeather = async (city: string | null = null, isCheckCache: boolean, lat: string | null = null, lon: string | null = null): Promise<IWeatherInfo> => {
   try {
     const currentDate = new Date()
-    const localStorageKey = `${city?.toLowerCase()?.trim()}-${currentDate.getHours()}-${currentDate.getDate()}-${currentDate.getMonth()}-${currentDate.getFullYear()}`
+    const localStorageKey = `${city?.toLowerCase()?.trim() || (lat || "" + lon || "")}-${currentDate.getHours()}-${currentDate.getDate()}-${currentDate.getMonth()}-${currentDate.getFullYear()}`
     const cachedCityData = localStorage.getItem(localStorageKey)
     if (cachedCityData && isCheckCache) {
       const weatherData = JSON.parse(cachedCityData)
