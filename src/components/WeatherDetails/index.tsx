@@ -16,7 +16,7 @@ export default function WeatherDetails({
   onRemoveFavorites,
 }: IWeatherDetailsProps) {
   return (
-    <section>
+    <section className="weather-section">
       <div className="weather-details">
         <h1 className="location-name">{city.name}</h1>
         <Button

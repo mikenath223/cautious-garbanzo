@@ -1,7 +1,6 @@
 .card {
   border-radius: 4px;
   align-self: flex-start;
-  max-width: 15vw;
   padding-inline: 1.2rem;
   padding-block: 1.7rem;
   background-color: #ffffff;
@@ -34,4 +33,11 @@
 .city-img {
   width: 24px;
   height: auto;
+}
+
+@media (max-width: 520px) {
+  .card {
+    margin-inline: auto;
+    max-width: 80vw;
+  }
 }

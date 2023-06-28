@@ -12,3 +12,15 @@
   width: max-content;
   margin-top: 0.2rem;
 }
+
+.search-form {
+  margin-inline: auto;
+  width: max-content;
+}
+
+@media (max-width: 420px) {
+  .search-form {
+    display: flex;
+    flex-direction: column;
+  }
+}

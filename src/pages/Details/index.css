@@ -16,4 +16,6 @@
   align-items: flex-start;
   margin-top: 4rem;
   margin-bottom: 2rem;
+  max-width: 286px;
+  margin-inline: auto;
 }

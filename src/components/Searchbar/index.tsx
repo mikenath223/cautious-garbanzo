@@ -41,7 +41,7 @@ export default function Searchbar() {
   const isDisabled = city?.trim() === "" || loading;
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} className="search-form">
       <input
         value={city || ""}
         onChange={onChange}

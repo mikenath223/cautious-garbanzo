@@ -4,4 +4,15 @@
   gap: 1rem;
   margin-top: 2.5rem;
   list-style: none;
+  align-items: center;
+}
+
+.favCities li {
+  min-width: 40%;
+}
+
+@media (max-width: 520px) {
+  .favCities li {
+    min-width: 70%;
+  }
 }
