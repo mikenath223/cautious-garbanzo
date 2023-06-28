@@ -33,7 +33,7 @@ export default function FavCityTemp({ onRemoveCity, city }: IFavCityProps) {
         </Button>
         <div className="card-item">
           <img src="/assets/icons/city.png" alt="" className="city-img" />
-          <h3>{city.location.name}</h3>
+          <h3>{city.name}</h3>
         </div>
         <div className="card-item">
           <img
@@ -42,7 +42,7 @@ export default function FavCityTemp({ onRemoveCity, city }: IFavCityProps) {
             className="city-img"
           />
           <h3>
-            {city.current.temperature}
+            {city.main.temp}
             <sup>o</sup>C
           </h3>
         </div>

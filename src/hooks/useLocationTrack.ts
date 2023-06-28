@@ -4,10 +4,15 @@ import { IPResponse } from "../utils/types";
 import { isNil } from "lodash";
 import { useState } from "react";
 
-type setLatLong = (value: string) => void
+interface ILatLong {
+  latitude: string | null;
+  longitude: string | null;
+}
+
+type setLatLong = (value: ILatLong) => void
 
 const formatCoords = (latitude: number | string, longitude: number | string) => {
-  return `${latitude},${longitude}`
+  return { latitude: latitude.toString(), longitude: longitude.toString() }
 }
 
 const getIPAddress = async (setLatLong: setLatLong) => {
@@ -27,7 +32,7 @@ const getIPAddress = async (setLatLong: setLatLong) => {
 }
 
 const useLocationTrack = () => {
-  const [latLong, setLatLong] = useState("")
+  const [latLong, setLatLong] = useState<ILatLong>({ latitude: null, longitude: null })
 
   if ('geolocation' in navigator) {
     navigator.geolocation.getCurrentPosition(

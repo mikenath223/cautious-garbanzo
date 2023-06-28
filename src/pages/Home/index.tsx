@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useCallback, useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 import FavCities from "../../components/FavCities";
 import Searchbar from "../../components/Searchbar";
 import useLocationTrack from "../../hooks/useLocationTrack";
@@ -10,30 +10,46 @@ let isRunGetLocation = false;
 
 export default function Home() {
   const navigate = useNavigate();
-  const latLongitude = useLocationTrack();
+  const { latitude, longitude } = useLocationTrack();
+  const [error, setError] = useState(false);
 
   const handleNavigate = useCallback(async () => {
-    const cityWeather = await getCityWeather(latLongitude, false);
-    if (cityWeather?.location?.name) {
-      localStorage.setItem("selected-city", JSON.stringify(cityWeather));
-      navigate("/details");
+    try {
+      const cityWeather = await getCityWeather(
+        null,
+        false,
+        latitude,
+        longitude
+      );
+      if (cityWeather?.name) {
+        localStorage.setItem("selected-city", JSON.stringify(cityWeather));
+        navigate("/details");
+      }
+    } catch (error) {
+      setError(true);
     }
-  }, [latLongitude, navigate]);
+  }, [latitude, longitude, navigate]);
 
   const onGetLocation = useCallback(async () => {
-    if (latLongitude !== "" && !isRunGetLocation) {
+    if (latitude && longitude && !isRunGetLocation) {
       isRunGetLocation = true;
       handleNavigate();
     }
-  }, [latLongitude, handleNavigate]);
+  }, [latitude, longitude, handleNavigate]);
 
   useEffect(() => {
     onGetLocation();
+    setError(false);
   }, [onGetLocation]);
 
   return (
     <main className="max-width-inhibitor home-main">
       <Searchbar />
+      {error && (
+        <div className="error-search">
+          "There was an error retrieving search result! Please try again"
+        </div>
+      )}
       <FavCities />
     </main>
   );

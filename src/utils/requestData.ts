@@ -1,15 +1,15 @@
 import { IWeatherInfo, PromiseFulfilledResult } from "./types"
 
-export const getCityWeather = async (city: string, isCheckCache: boolean): Promise<IWeatherInfo> => {
+export const getCityWeather = async (city: string | null = null, isCheckCache: boolean, lat: string | null = null, lon: string | null = null): Promise<IWeatherInfo> => {
   try {
     const currentDate = new Date()
-    const localStorageKey = `${city.toLowerCase().trim()}-${currentDate.getHours()}-${currentDate.getDate()}-${currentDate.getMonth()}-${currentDate.getFullYear()}`
+    const localStorageKey = `${city?.toLowerCase()?.trim()}-${currentDate.getHours()}-${currentDate.getDate()}-${currentDate.getMonth()}-${currentDate.getFullYear()}`
     const cachedCityData = localStorage.getItem(localStorageKey)
     if (cachedCityData && isCheckCache) {
       const weatherData = JSON.parse(cachedCityData)
       return weatherData
     }
-    const url = `http://api.weatherstack.com/current?access_key=04c73e2c81cd37fd215de627927cdd44&query=${city}`;
+    const url = getQueryUrl(city, lat, lon)
     const response = await fetch(url)
     const result = await response.json()
     if (result.error) {
@@ -18,7 +18,7 @@ export const getCityWeather = async (city: string, isCheckCache: boolean): Promi
     localStorage.setItem(localStorageKey, JSON.stringify(result))
     return result
   } catch (error) {
-    const errMsg = `Failed to retrieve ${city.trim()} data!`
+    const errMsg = `Failed to retrieve ${city?.trim()} data!`
     throw new Error(errMsg)
   }
 }
@@ -35,4 +35,15 @@ export const getFavsCityWeather = async (cities: string[]) => {
   } catch (_) {
     return []
   }
+}
+
+const getQueryUrl = (city: string | null, lat: string | null, lon: string | null) => {
+  const cityQuery = `&q=${city}`
+  const latQuery = `&lat=${lat}&lon=${lon}`
+  if (city && lat) {
+    return `https://api.openweathermap.org/data/2.5/weather?units=metric${cityQuery}${latQuery}&APPID=3227974f4ec9644ec0f1cae6e61af58b`
+  } else if (!lat || !lon) {
+    return `https://api.openweathermap.org/data/2.5/weather?units=metric${cityQuery}&APPID=3227974f4ec9644ec0f1cae6e61af58b`
+  }
+  return `https://api.openweathermap.org/data/2.5/weather?units=metric${latQuery}&APPID=3227974f4ec9644ec0f1cae6e61af58b`
 }

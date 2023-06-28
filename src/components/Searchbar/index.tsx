@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { getCityWeather } from "../../utils/requestData";
 
 export default function Searchbar() {
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState<string | null>(null);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -13,14 +13,14 @@ export default function Searchbar() {
 
   const onSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
-    if (city.trim() === "") {
+    if (city && city?.trim() === "") {
       return setError(true);
     }
     setLoading(true);
     try {
       setError(false);
       const cityWeather = await getCityWeather(city, false);
-      if (cityWeather?.location) {
+      if (cityWeather?.name) {
         localStorage.setItem("selected-city", JSON.stringify(cityWeather));
         setCity("");
         navigate("/details");
@@ -38,12 +38,12 @@ export default function Searchbar() {
     setCity(newValue);
   };
 
-  const isDisabled = city.trim() === "" || loading;
+  const isDisabled = city?.trim() === "" || loading;
 
   return (
     <form onSubmit={onSubmit}>
       <input
-        value={city}
+        value={city || ""}
         onChange={onChange}
         type="text"
         name="search"

@@ -38,7 +38,7 @@ exports[`App should match snapshot 1`] = `
         value=""
       />
       <button
-        class="submit-btn cursor-none"
+        class="submit-btn cursor-pointer"
         type="submit"
       >
         Search

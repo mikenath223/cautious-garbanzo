@@ -23,7 +23,7 @@ exports[`FavCityTemp should match snapshot 1`] = `
           src="/assets/icons/city.png"
         />
         <h3>
-          New York
+          Lagos
         </h3>
       </div>
       <div
@@ -35,7 +35,7 @@ exports[`FavCityTemp should match snapshot 1`] = `
           src="/assets/icons/temperature.png"
         />
         <h3>
-          13
+          25.18
           <sup>
             o
           </sup>

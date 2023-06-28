@@ -13,7 +13,7 @@ export default function Details() {
   const city: IWeatherInfo | undefined = selectedCity
     ? JSON.parse(selectedCity)
     : undefined;
-  const notesKey = `${city?.location?.name}-notes`;
+  const notesKey = `${city?.name}-notes`;
 
   const [selectedCityNotes, setSelectedCityNotes] = useLocalStorage<
     INote[] | undefined
@@ -26,11 +26,9 @@ export default function Details() {
 
   const isCityFavorites = useMemo(() => {
     return favCitiesTemp
-      ? favCitiesTemp.some(
-          (favCity) => favCity.location.name === city?.location?.name
-        )
+      ? favCitiesTemp.some((favCity) => favCity.name === city?.name)
       : false;
-  }, [city?.location?.name, favCitiesTemp]);
+  }, [city?.name, favCitiesTemp]);
 
   const onSetNote = (event: React.FormEvent<HTMLTextAreaElement>) => {
     setInputNote(event.currentTarget.value);
@@ -88,14 +86,14 @@ export default function Details() {
 
   const onRemoveFavorites = () => {
     const newFavs = favCitiesTemp?.filter(
-      (favCity) => favCity.location.name !== city?.location.name
+      (favCity) => favCity.name !== city?.name
     );
     setFavCitiesTemp(newFavs);
   };
 
   return (
     <main className="details-main max-width-inhibitor">
-      {city?.location ? (
+      {city?.name ? (
         <>
           <WeatherDetails
             city={city}

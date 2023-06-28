@@ -1,37 +1,43 @@
-interface IRequest {
-  type: string;
-  query: string;
+interface ICoord {
+  lon: number;
+  lat: number;
 }
 
-interface ILocation {
-  name: string;
-  country: string;
-  region: string;
-  localtime: string;
+interface IWeather {
+  main: string;
+  description: string;
+  icon: string;
 }
 
-interface ICurrent {
-  observation_time: string;
-  temperature: number;
-  weather_code: number;
-  weather_icons: string[];
-  weather_descriptions: string[];
-  wind_speed: number;
-  wind_degree: number;
-  wind_dir: string;
+interface IMainWeather {
+  temp: number;
+  feels_like: number;
+  temp_min: number;
+  temp_max: number;
   pressure: number;
-  precip: number;
   humidity: number;
-  cloudcover: number;
-  feelslike: number;
-  uv_index: number;
-  visibility: number;
+  sea_level: number;
+  grnd_level: number;
+}
+
+interface IWindWeather {
+  speed: number;
+  deg: number;
+  gust: number;
+}
+
+interface ISysWeather {
+  country: string;
 }
 
 export interface IWeatherInfo {
-  request: IRequest;
-  location: ILocation;
-  current: ICurrent;
+  coord: ICoord;
+  weather: IWeather[];
+  main: IMainWeather;
+  visibility: number;
+  wind: IWindWeather;
+  sys: ISysWeather;
+  name: string;
 }
 
 export interface PromiseFulfilledResult<T> {

@@ -6,15 +6,10 @@ exports[`Searchbar should match snapshot 1`] = `
     <div
       class="weather-details"
     >
-      <img
-        alt=""
-        class="icon-img"
-        src="https://assets.weatherstack.com/images/wsymbols01_png_64/wsymbol_0001_sunny.png"
-      />
       <h1
         class="location-name"
       >
-        New York
+        Lagos
       </h1>
       <button
         class="submit-btn favorites-btn"
@@ -39,19 +34,7 @@ exports[`Searchbar should match snapshot 1`] = `
         src="/assets/icons/country.png"
       />
       <span>
-        United States of America
-      </span>
-    </div>
-    <div
-      class="flex-center"
-    >
-      <img
-        alt=""
-        class="icon-img"
-        src="/assets/icons/state.png"
-      />
-      <span>
-        New York
+        NG
       </span>
     </div>
     <ul
@@ -63,26 +46,12 @@ exports[`Searchbar should match snapshot 1`] = `
         <span
           class="font-20"
         >
-          Observation time
-        </span>
-        <span
-          class="font-16"
-        >
-          12:14 PM
-        </span>
-      </li>
-      <li
-        class="details-item card box-shadow"
-      >
-        <span
-          class="font-20"
-        >
           Temperature
         </span>
         <span
           class="font-16"
         >
-          13
+          25.18
           <sup>
             o
           </sup>
@@ -100,7 +69,7 @@ exports[`Searchbar should match snapshot 1`] = `
         <span
           class="font-16"
         >
-          Sunny
+          light rain
         </span>
       </li>
       <li
@@ -114,7 +83,7 @@ exports[`Searchbar should match snapshot 1`] = `
         <span
           class="font-16"
         >
-          0
+          1.44
         </span>
       </li>
       <li
@@ -128,21 +97,7 @@ exports[`Searchbar should match snapshot 1`] = `
         <span
           class="font-16"
         >
-          349
-        </span>
-      </li>
-      <li
-        class="details-item card box-shadow"
-      >
-        <span
-          class="font-20"
-        >
-          Wind direction
-        </span>
-        <span
-          class="font-16"
-        >
-          N
+          225
         </span>
       </li>
       <li
@@ -156,21 +111,7 @@ exports[`Searchbar should match snapshot 1`] = `
         <span
           class="font-16"
         >
-          1010
-        </span>
-      </li>
-      <li
-        class="details-item card box-shadow"
-      >
-        <span
-          class="font-20"
-        >
-          Precipitation
-        </span>
-        <span
-          class="font-16"
-        >
-          0
+          1015
         </span>
       </li>
       <li
@@ -184,21 +125,7 @@ exports[`Searchbar should match snapshot 1`] = `
         <span
           class="font-16"
         >
-          90
-        </span>
-      </li>
-      <li
-        class="details-item card box-shadow"
-      >
-        <span
-          class="font-20"
-        >
-          Cloud cover
-        </span>
-        <span
-          class="font-16"
-        >
-          0
+          96
         </span>
       </li>
       <li
@@ -212,21 +139,7 @@ exports[`Searchbar should match snapshot 1`] = `
         <span
           class="font-16"
         >
-          13
-        </span>
-      </li>
-      <li
-        class="details-item card box-shadow"
-      >
-        <span
-          class="font-20"
-        >
-          UV index
-        </span>
-        <span
-          class="font-16"
-        >
-          4
+          26.26
         </span>
       </li>
       <li
@@ -240,7 +153,7 @@ exports[`Searchbar should match snapshot 1`] = `
         <span
           class="font-16"
         >
-          16
+          10000
         </span>
       </li>
     </ul>

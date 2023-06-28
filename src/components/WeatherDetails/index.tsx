@@ -18,12 +18,7 @@ export default function WeatherDetails({
   return (
     <section>
       <div className="weather-details">
-        <img
-          src={city.current.weather_icons?.[0]}
-          alt=""
-          className="icon-img"
-        />
-        <h1 className="location-name">{city.location.name}</h1>
+        <h1 className="location-name">{city.name}</h1>
         <Button
           className="favorites-btn"
           onClick={() =>
@@ -48,69 +43,43 @@ export default function WeatherDetails({
       </div>
       <div className="country-content flex-center">
         <img src={"/assets/icons/country.png"} alt="" className="icon-img" />
-        <span>{city.location.country}</span>
-      </div>
-      <div className="flex-center">
-        <img src={"/assets/icons/state.png"} alt="" className="icon-img" />
-        <span>{city.location.region}</span>
+        <span>{city.sys.country}</span>
       </div>
       <ul className="details-content">
         <li className="details-item card box-shadow">
-          <span className="font-20">Observation time</span>
-          <span className="font-16">{city.current.observation_time}</span>
-        </li>
-        <li className="details-item card box-shadow">
           <span className="font-20">Temperature</span>
           <span className="font-16">
-            {city.current.temperature}
+            {city.main.temp}
             <sup>o</sup>C
           </span>
         </li>
         <li className="details-item card box-shadow">
           <span className="font-20">Weather description</span>
-          <span className="font-16">
-            {city.current.weather_descriptions?.[0]}
-          </span>
+          <span className="font-16">{city.weather?.[0]?.description}</span>
         </li>
         <li className="details-item card box-shadow">
           <span className="font-20">Wind speed</span>
-          <span className="font-16">{city.current.wind_speed}</span>
+          <span className="font-16">{city.wind.speed}</span>
         </li>
         <li className="details-item card box-shadow">
           <span className="font-20">Wind degree</span>
-          <span className="font-16">{city.current.wind_degree}</span>
-        </li>
-        <li className="details-item card box-shadow">
-          <span className="font-20">Wind direction</span>
-          <span className="font-16">{city.current.wind_dir}</span>
+          <span className="font-16">{city.wind.deg}</span>
         </li>
         <li className="details-item card box-shadow">
           <span className="font-20">Pressure</span>
-          <span className="font-16">{city.current.pressure}</span>
-        </li>
-        <li className="details-item card box-shadow">
-          <span className="font-20">Precipitation</span>
-          <span className="font-16">{city.current.precip}</span>
+          <span className="font-16">{city.main.pressure}</span>
         </li>
         <li className="details-item card box-shadow">
           <span className="font-20">Humidity</span>
-          <span className="font-16">{city.current.humidity}</span>
-        </li>
-        <li className="details-item card box-shadow">
-          <span className="font-20">Cloud cover</span>
-          <span className="font-16">{city.current.cloudcover}</span>
+          <span className="font-16">{city.main.humidity}</span>
         </li>
         <li className="details-item card box-shadow">
           <span className="font-20">Feels like</span>
-          <span className="font-16">{city.current.feelslike}</span>
-        </li>
-        <li className="details-item card box-shadow">
-          <span className="font-20">UV index</span>
-          <span className="font-16">{city.current.uv_index}</span>
+          <span className="font-16">{city.main.feels_like}</span>
         </li>
         <li className="details-item card box-shadow">
           <span className="font-20">Visibility</span>
-          <span className="font-16">{city.current.visibility}</span>
+          <span className="font-16">{city.visibility}</span>
         </li>
       </ul>
     </section>

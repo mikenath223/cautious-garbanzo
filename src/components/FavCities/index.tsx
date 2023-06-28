@@ -25,7 +25,7 @@ export default function FavCities() {
 
   const onRemoveCity = (city: IWeatherInfo) => {
     let filteredCities = favCitiesTemp?.filter(
-      (cityData) => cityData.location.name !== city.location.name
+      (cityData) => cityData.name !== city.name
     );
     if (filteredCities) {
       let sortedCities = sortCitiesData(filteredCities);
@@ -37,7 +37,7 @@ export default function FavCities() {
     <section>
       <ul className="favCities">
         {favCitiesTemp?.map((city: IWeatherInfo) => {
-          let key = city.location.name;
+          let key = city.name;
           return <FavCity key={key} city={city} onRemoveCity={onRemoveCity} />;
         })}
       </ul>
