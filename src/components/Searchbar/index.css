@@ -1,0 +1,14 @@
+.search-input {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border: 1px solid var(--bg-orange);
+  margin-right: 0.5rem;
+}
+
+.error-search {
+  padding: 0.5rem;
+  background-color: var(--bg-orange);
+  color: #ffffff;
+  width: max-content;
+  margin-top: 0.2rem;
+}

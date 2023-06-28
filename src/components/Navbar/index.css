@@ -1,0 +1,22 @@
+.header {
+  background-color: var(--bg-orange);
+  padding: 1.2rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.app-name {
+  color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-right: 2.5rem;
+}
+
+.nav-link {
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+}

@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match snapshot 1`] = `
+<div>
+  <header
+    class="header"
+  >
+    <nav
+      class="nav max-width-inhibitor"
+    >
+      <h6
+        class="app-name"
+      >
+        WeatherAPP
+      </h6>
+      <a
+        aria-current="page"
+        class="nav-link active"
+        href="/"
+      >
+        <h6>
+          Home
+        </h6>
+      </a>
+    </nav>
+  </header>
+  <main
+    class="max-width-inhibitor home-main"
+  >
+    <form>
+      <input
+        class="search-input"
+        id="search"
+        name="search"
+        placeholder="Search city weather..."
+        required=""
+        type="text"
+        value=""
+      />
+      <button
+        class="submit-btn cursor-none"
+        type="submit"
+      >
+        Search
+      </button>
+    </form>
+    <section>
+      <ul
+        class="favCities"
+      />
+    </section>
+  </main>
+  <footer
+    class="p-5"
+  >
+    <div
+      class="footer max-width-inhibitor"
+    >
+      <h5>
+        WeatherAPP 
+        2023
+         ©
+      </h5>
+      <span
+        class="italic font-medium"
+      >
+        Powered by weatherstack
+      </span>
+    </div>
+  </footer>
+</div>
+`;

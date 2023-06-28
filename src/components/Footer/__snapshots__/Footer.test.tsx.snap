@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should match snapshot 1`] = `
+<div>
+  <footer
+    class="p-5"
+  >
+    <div
+      class="footer max-width-inhibitor"
+    >
+      <h5>
+        WeatherAPP 
+        2023
+         ©
+      </h5>
+      <span
+        class="italic font-medium"
+      >
+        Powered by weatherstack
+      </span>
+    </div>
+  </footer>
+</div>
+`;

@@ -1,0 +1,11 @@
+.notes-footer {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.icon-img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  cursor: pointer;
+}

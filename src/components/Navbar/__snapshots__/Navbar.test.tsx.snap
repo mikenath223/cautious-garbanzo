@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar should match snapshot 1`] = `
+<div>
+  <header
+    class="header"
+  >
+    <nav
+      class="nav max-width-inhibitor"
+    >
+      <h6
+        class="app-name"
+      >
+        WeatherAPP
+      </h6>
+      <a
+        aria-current="page"
+        class="nav-link active"
+        href="/"
+      >
+        <h6>
+          Home
+        </h6>
+      </a>
+    </nav>
+  </header>
+</div>
+`;

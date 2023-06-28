@@ -1,0 +1,7 @@
+.favCities {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  list-style: none;
+}

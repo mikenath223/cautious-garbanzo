@@ -1,0 +1,55 @@
+.weather-details {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  flex: 1 0 0;
+  align-items: center;
+}
+
+.location-name {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+}
+
+.details-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 2.5rem;
+  flex-direction: row;
+}
+
+.details-item.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: unset;
+  min-width: 225px;
+}
+
+.font-20 {
+  font-size: 20px;
+  line-height: 1rem;
+}
+
+.font-16 {
+  font-size: 16px;
+  line-height: 0.7rem;
+}
+
+.favorites-btn {
+  display: flex;
+  gap: 0.5rem;
+  height: 38px;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.country-content {
+  margin-top: 0.5rem;
+}

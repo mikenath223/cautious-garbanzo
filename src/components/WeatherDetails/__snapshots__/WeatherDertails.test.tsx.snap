@@ -1,0 +1,249 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Searchbar should match snapshot 1`] = `
+<div>
+  <section>
+    <div
+      class="weather-details"
+    >
+      <img
+        alt=""
+        class="icon-img"
+        src="https://assets.weatherstack.com/images/wsymbols01_png_64/wsymbol_0001_sunny.png"
+      />
+      <h1
+        class="location-name"
+      >
+        New York
+      </h1>
+      <button
+        class="submit-btn favorites-btn"
+        type="submit"
+      >
+        <span>
+          Add to favorites
+        </span>
+        <img
+          alt=""
+          class="icon-img"
+          src="/assets/icons/unliked.png"
+        />
+      </button>
+    </div>
+    <div
+      class="country-content flex-center"
+    >
+      <img
+        alt=""
+        class="icon-img"
+        src="/assets/icons/country.png"
+      />
+      <span>
+        United States of America
+      </span>
+    </div>
+    <div
+      class="flex-center"
+    >
+      <img
+        alt=""
+        class="icon-img"
+        src="/assets/icons/state.png"
+      />
+      <span>
+        New York
+      </span>
+    </div>
+    <ul
+      class="details-content"
+    >
+      <li
+        class="details-item card box-shadow"
+      >
+        <span
+          class="font-20"
+        >
+          Observation time
+        </span>
+        <span
+          class="font-16"
+        >
+          12:14 PM
+        </span>
+      </li>
+      <li
+        class="details-item card box-shadow"
+      >
+        <span
+          class="font-20"
+        >
+          Temperature
+        </span>
+        <span
+          class="font-16"
+        >
+          13
+          <sup>
+            o
+          </sup>
+          C
+        </span>
+      </li>
+      <li
+        class="details-item card box-shadow"
+      >
+        <span
+          class="font-20"
+        >
+          Weather description
+        </span>
+        <span
+          class="font-16"
+        >
+          Sunny
+        </span>
+      </li>
+      <li
+        class="details-item card box-shadow"
+      >
+        <span
+          class="font-20"
+        >
+          Wind speed
+        </span>
+        <span
+          class="font-16"
+        >
+          0
+        </span>
+      </li>
+      <li
+        class="details-item card box-shadow"
+      >
+        <span
+          class="font-20"
+        >
+          Wind degree
+        </span>
+        <span
+          class="font-16"
+        >
+          349
+        </span>
+      </li>
+      <li
+        class="details-item card box-shadow"
+      >
+        <span
+          class="font-20"
+        >
+          Wind direction
+        </span>
+        <span
+          class="font-16"
+        >
+          N
+        </span>
+      </li>
+      <li
+        class="details-item card box-shadow"
+      >
+        <span
+          class="font-20"
+        >
+          Pressure
+        </span>
+        <span
+          class="font-16"
+        >
+          1010
+        </span>
+      </li>
+      <li
+        class="details-item card box-shadow"
+      >
+        <span
+          class="font-20"
+        >
+          Precipitation
+        </span>
+        <span
+          class="font-16"
+        >
+          0
+        </span>
+      </li>
+      <li
+        class="details-item card box-shadow"
+      >
+        <span
+          class="font-20"
+        >
+          Humidity
+        </span>
+        <span
+          class="font-16"
+        >
+          90
+        </span>
+      </li>
+      <li
+        class="details-item card box-shadow"
+      >
+        <span
+          class="font-20"
+        >
+          Cloud cover
+        </span>
+        <span
+          class="font-16"
+        >
+          0
+        </span>
+      </li>
+      <li
+        class="details-item card box-shadow"
+      >
+        <span
+          class="font-20"
+        >
+          Feels like
+        </span>
+        <span
+          class="font-16"
+        >
+          13
+        </span>
+      </li>
+      <li
+        class="details-item card box-shadow"
+      >
+        <span
+          class="font-20"
+        >
+          UV index
+        </span>
+        <span
+          class="font-16"
+        >
+          4
+        </span>
+      </li>
+      <li
+        class="details-item card box-shadow"
+      >
+        <span
+          class="font-20"
+        >
+          Visibility
+        </span>
+        <span
+          class="font-16"
+        >
+          16
+        </span>
+      </li>
+    </ul>
+  </section>
+</div>
+`;
