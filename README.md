@@ -24,9 +24,13 @@
 
   REACT_APP_WEATHERSTACK_API_KEY=<your WeatherStack API Key>
 
+- Run `npm start` to start the application on the browser.
+
+- Run `npm test` to run tests in the browser
+> Please ensure you use node version greater than or equal to v14.0 to run the tests.
 ````
 
-> _These instructions are very important to avoid the **Blank Page** issue when running the application on `http://localhost:3000`._
+> Please ensure you use node version greater than or equal v14.0 to run the tests.
 
 ## **Learn More**
 

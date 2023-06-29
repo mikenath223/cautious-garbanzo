@@ -17,33 +17,35 @@ export default function WeatherDetails({
 }: IWeatherDetailsProps) {
   return (
     <section className="weather-section">
-      <div className="weather-details">
-        <h1 className="location-name">{city.name}</h1>
-        <Button
-          className="favorites-btn"
-          onClick={() =>
-            !isFavorites ? onAddFavorites() : onRemoveFavorites()
-          }
-        >
-          {!isFavorites ? (
-            <span>Add to favorites</span>
-          ) : (
-            <span>Remove from favorites</span>
-          )}
-          <img
-            src={
-              !isFavorites
-                ? "/assets/icons/unliked.png"
-                : "/assets/icons/liked.png"
+      <div>
+        <div className="weather-details">
+          <h1 className="location-name">{city.name}</h1>
+          <Button
+            className="favorites-btn"
+            onClick={() =>
+              !isFavorites ? onAddFavorites() : onRemoveFavorites()
             }
-            alt=""
-            className="icon-img"
-          />
-        </Button>
-      </div>
-      <div className="country-content flex-center">
-        <img src={"/assets/icons/country.png"} alt="" className="icon-img" />
-        <span>{city.sys.country}</span>
+          >
+            {!isFavorites ? (
+              <span>Add to favorites</span>
+            ) : (
+              <span>Remove from favorites</span>
+            )}
+            <img
+              src={
+                !isFavorites
+                  ? "/assets/icons/unliked.png"
+                  : "/assets/icons/liked.png"
+              }
+              alt=""
+              className="icon-img"
+            />
+          </Button>
+        </div>
+        <div className="country-content">
+          <img src={"/assets/icons/country.png"} alt="" className="icon-img" />
+          <span>{city.sys.country}</span>
+        </div>
       </div>
       <ul className="details-content">
         <li className="details-item card box-shadow">

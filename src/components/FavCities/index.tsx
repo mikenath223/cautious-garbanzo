@@ -42,7 +42,9 @@ export default function FavCities() {
         })}
       </ul>
       {favCitiesTemp?.length === 0 && (
-        <h2>No favorite cities in list. Please add favorites.</h2>
+        <h2 className="text-center">
+          No favorite cities in list. Please add favorites.
+        </h2>
       )}
     </section>
   );
