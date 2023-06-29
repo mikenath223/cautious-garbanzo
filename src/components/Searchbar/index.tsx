@@ -17,8 +17,8 @@ export default function Searchbar() {
       return setError(true);
     }
     setLoading(true);
+    setError(false);
     try {
-      setError(false);
       const cityWeather = await getCityWeather(city, false);
       if (cityWeather?.name) {
         localStorage.setItem("selected-city", JSON.stringify(cityWeather));
@@ -57,7 +57,7 @@ export default function Searchbar() {
         disabled={isDisabled}
         className={isDisabled ? "cursor-none" : "cursor-pointer"}
       >
-        Search
+        {loading ? "Loading..." : "Search"}
       </Button>
       {error && (
         <div className="error-search">

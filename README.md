@@ -22,7 +22,7 @@
 
   ```bash
 
-  REACT_APP_WEATHERSTACK_API_KEY=<your WeatherStack API Key>
+  REACT_APP_OPENWEATHER_API_KEY=<your OpenWeather API Key>
 
 - Run `npm start` to start the application on the browser.
 

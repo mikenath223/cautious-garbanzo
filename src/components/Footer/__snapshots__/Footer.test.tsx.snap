@@ -16,7 +16,7 @@ exports[`Footer should match snapshot 1`] = `
       <span
         class="italic font-medium"
       >
-        Powered by weatherstack
+        Powered by OpenWeather
       </span>
     </div>
   </footer>

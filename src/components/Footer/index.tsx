@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="p-5">
       <div className="footer max-width-inhibitor">
         <h5>WeatherAPP {`${new Date().getFullYear()}`} &copy;</h5>
-        <span className="italic font-medium">Powered by weatherstack</span>
+        <span className="italic font-medium">Powered by OpenWeather</span>
       </div>
     </footer>
   );
