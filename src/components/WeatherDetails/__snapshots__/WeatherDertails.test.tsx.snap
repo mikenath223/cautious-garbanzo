@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Searchbar should match snapshot 1`] = `
+<div>
+  <section
+    class="weather-section"
+  >
+    <div
+      class="weather-details"
+    >
+      <h1
+        class="location-name"
+      >
+        Lagos
+      </h1>
+      <button
+        class="submit-btn favorites-btn"
+        type="submit"
+      >
+        <span>
+          Add to favorites
+        </span>
+        <img
+          alt=""
+          class="icon-img"
+          src="/assets/icons/unliked.png"
+        />
+      </button>
+    </div>
+    <div
+      class="country-content flex-center"
+    >
+      <img
+        alt=""
+        class="icon-img"
+        src="/assets/icons/country.png"
+      />
+      <span>
+        NG
+      </span>
+    </div>
+    <ul
+      class="details-content"
+    >
+      <li
+        class="details-item card box-shadow"
+      >
+        <span
+          class="font-20"
+        >
+          Temperature
+        </span>
+        <span
+          class="font-16"
+        >
+          25.18
+          <sup>
+            o
+          </sup>
+          C
+        </span>
+      </li>
+      <li
+        class="details-item card box-shadow"
+      >
+        <span
+          class="font-20"
+        >
+          Weather description
+        </span>
+        <span
+          class="font-16"
+        >
+          light rain
+        </span>
+      </li>
+      <li
+        class="details-item card box-shadow"
+      >
+        <span
+          class="font-20"
+        >
+          Wind speed
+        </span>
+        <span
+          class="font-16"
+        >
+          1.44
+        </span>
+      </li>
+      <li
+        class="details-item card box-shadow"
+      >
+        <span
+          class="font-20"
+        >
+          Wind degree
+        </span>
+        <span
+          class="font-16"
+        >
+          225
+        </span>
+      </li>
+      <li
+        class="details-item card box-shadow"
+      >
+        <span
+          class="font-20"
+        >
+          Pressure
+        </span>
+        <span
+          class="font-16"
+        >
+          1015
+        </span>
+      </li>
+      <li
+        class="details-item card box-shadow"
+      >
+        <span
+          class="font-20"
+        >
+          Humidity
+        </span>
+        <span
+          class="font-16"
+        >
+          96
+        </span>
+      </li>
+      <li
+        class="details-item card box-shadow"
+      >
+        <span
+          class="font-20"
+        >
+          Feels like
+        </span>
+        <span
+          class="font-16"
+        >
+          26.26
+        </span>
+      </li>
+      <li
+        class="details-item card box-shadow"
+      >
+        <span
+          class="font-20"
+        >
+          Visibility
+        </span>
+        <span
+          class="font-16"
+        >
+          10000
+        </span>
+      </li>
+    </ul>
+  </section>
+</div>
+`;

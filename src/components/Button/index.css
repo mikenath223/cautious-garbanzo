@@ -1,0 +1,22 @@
+.submit-btn {
+  background-color: unset;
+  color: var(--bg-orange);
+  font-weight: 600;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  border: 1px solid var(--bg-orange);
+  border-radius: 0.2rem;
+}
+
+.submit-btn:hover {
+  background-color: var(--bg-orange);
+  color: #ffffff;
+}
+
+.submit-btn.cursor-none {
+  cursor: not-allowed;
+}
+
+.submit-btn.cursor-pointer {
+  cursor: pointer;
+}

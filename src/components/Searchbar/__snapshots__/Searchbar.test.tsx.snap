@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Searchbar should match snapshot 1`] = `
+<div>
+  <form
+    class="search-form"
+  >
+    <input
+      class="search-input"
+      id="search"
+      name="search"
+      placeholder="Search city weather..."
+      required=""
+      type="text"
+      value=""
+    />
+    <button
+      class="submit-btn cursor-pointer"
+      type="submit"
+    >
+      Search
+    </button>
+  </form>
+</div>
+`;

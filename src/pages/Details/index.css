@@ -1,0 +1,21 @@
+.details-main {
+  margin-block: 2.5rem;
+}
+
+.city-notes-input {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border: 1px solid var(--bg-orange);
+  margin-right: 0.5rem;
+}
+
+.city-form-notes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  max-width: 286px;
+  margin-inline: auto;
+}

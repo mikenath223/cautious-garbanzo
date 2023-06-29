@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notes should match snapshot 1`] = `
+<div>
+  <li
+    class="card box-shadow"
+  >
+    <h3>
+      Welcome
+    </h3>
+    <div
+      class="notes-footer"
+    >
+      <img
+        alt=""
+        class="icon-img"
+        src="/assets/icons/delete.png"
+      />
+      <img
+        alt=""
+        class="icon-img"
+        src="/assets/icons/edit.png"
+      />
+    </div>
+  </li>
+</div>
+`;

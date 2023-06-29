@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FavCityTemp should match snapshot 1`] = `
+<div>
+  <li>
+    <a
+      class="card box-shadow"
+      href="/details"
+      tabindex="0"
+    >
+      <button
+        class="submit-btn remove-btn"
+        type="submit"
+      >
+        -
+      </button>
+      <div
+        class="card-item"
+      >
+        <img
+          alt=""
+          class="city-img"
+          src="/assets/icons/city.png"
+        />
+        <h3>
+          Lagos
+        </h3>
+      </div>
+      <div
+        class="card-item"
+      >
+        <img
+          alt=""
+          class="city-img"
+          src="/assets/icons/temperature.png"
+        />
+        <h3>
+          25.18
+          <sup>
+            o
+          </sup>
+          C
+        </h3>
+      </div>
+    </a>
+  </li>
+</div>
+`;
