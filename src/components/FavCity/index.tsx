@@ -8,7 +8,7 @@ interface IFavCityProps {
   onRemoveCity: (city: IWeatherInfo) => void;
 }
 
-export default function FavCityTemp({ onRemoveCity, city }: IFavCityProps) {
+export default function FavCity({ onRemoveCity, city }: IFavCityProps) {
   const handleRemoveCity = (event: React.SyntheticEvent) => {
     event.stopPropagation();
     event.preventDefault();
@@ -33,7 +33,7 @@ export default function FavCityTemp({ onRemoveCity, city }: IFavCityProps) {
         </Button>
         <div className="card-item">
           <img src="/assets/icons/city.png" alt="" className="city-img" />
-          <h3>{city.name}</h3>
+          <h3>{city?.name}</h3>
         </div>
         <div className="card-item">
           <img
@@ -42,7 +42,7 @@ export default function FavCityTemp({ onRemoveCity, city }: IFavCityProps) {
             className="city-img"
           />
           <h3>
-            {city.main.temp}
+            {city?.main?.temp}
             <sup>o</sup>C
           </h3>
         </div>

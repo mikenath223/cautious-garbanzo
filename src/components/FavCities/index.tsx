@@ -5,6 +5,7 @@ import { getFavsCityWeather } from "../../utils/requestData";
 import { IWeatherInfo } from "../../utils/types";
 import FavCity from "../FavCity";
 import sortCitiesData from "../../utils/sortCitiesData";
+import { v4 as uuidv4 } from "uuid";
 import "./index.css";
 
 export default function FavCities() {
@@ -37,7 +38,7 @@ export default function FavCities() {
     <section>
       <ul className="favCities">
         {favCitiesTemp?.map((city: IWeatherInfo) => {
-          let key = city.name;
+          let key = city.name || uuidv4();
           return <FavCity key={key} city={city} onRemoveCity={onRemoveCity} />;
         })}
       </ul>

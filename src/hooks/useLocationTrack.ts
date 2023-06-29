@@ -2,7 +2,7 @@ import fetchIPAddress from "../utils/getIPAddress";
 import isValid from "../utils/validityChecker";
 import { IPResponse } from "../utils/types";
 import { isNil } from "lodash";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface ILatLong {
   latitude: string | null;
@@ -34,23 +34,30 @@ const getIPAddress = async (setLatLong: setLatLong) => {
 const useLocationTrack = () => {
   const [latLong, setLatLong] = useState<ILatLong>({ latitude: null, longitude: null })
 
-  if ('geolocation' in navigator) {
-    navigator.geolocation.getCurrentPosition(
-      async (position) => {
-        const latlong = formatCoords(
-          position.coords.latitude,
-          position.coords.longitude
-        )
-        setLatLong(latlong)
-      },
-      (error) => {
-        console.error(error)
-        getIPAddress(setLatLong)
-      }
-    )
-  } else {
-    getIPAddress(setLatLong)
+  const getLocation = () => {
+    if ('geolocation' in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        async (position) => {
+          const latlong = formatCoords(
+            position.coords.latitude,
+            position.coords.longitude
+          )
+          setLatLong(latlong)
+        },
+        (error) => {
+          console.error(error)
+          getIPAddress(setLatLong)
+        }
+      )
+    } else {
+      getIPAddress(setLatLong)
+    }
   }
+
+  useEffect(() => {
+    getLocation()
+  }, [])
+
   return latLong;
 }
 

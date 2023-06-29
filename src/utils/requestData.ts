@@ -25,9 +25,8 @@ export const getCityWeather = async (city: string | null = null, isCheckCache: b
 const sortCities = (cities: string[]) => cities.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
 
 export const getFavsCityWeather = async (cities: string[]) => {
-  const fetchRequests = sortCities(cities).map(city => getCityWeather(city, true));
-
   try {
+    const fetchRequests = sortCities(cities).map(city => getCityWeather(city, true));
     const citiesInfo = await Promise.allSettled(fetchRequests)
     const data = citiesInfo.filter(data => data.status === "fulfilled").map(data => (data as PromiseFulfilledResult<IWeatherInfo>).value)
     return data
@@ -40,9 +39,9 @@ const getQueryUrl = (city: string | null, lat: string | null, lon: string | null
   const cityQuery = `&q=${city}`
   const latQuery = `&lat=${lat}&lon=${lon}`
   if (city && lat) {
-    return `https://api.openweathermap.org/data/2.5/weather?units=metric${cityQuery}${latQuery}&APPID=${process.env.REACT_APP_WEATHERSTACK_API_KEY}`
+    return `https://api.openweathermap.org/data/2.5/weather?units=metric${cityQuery}${latQuery}&APPID=8a72f435201f825883627f2f955cbaa6`
   } else if (!lat || !lon) {
-    return `https://api.openweathermap.org/data/2.5/weather?units=metric${cityQuery}&APPID=${process.env.REACT_APP_WEATHERSTACK_API_KEY}`
+    return `https://api.openweathermap.org/data/2.5/weather?units=metric${cityQuery}&APPID=8a72f435201f825883627f2f955cbaa6`
   }
-  return `https://api.openweathermap.org/data/2.5/weather?units=metric${latQuery}&APPID=${process.env.REACT_APP_WEATHERSTACK_API_KEY}`
+  return `https://api.openweathermap.org/data/2.5/weather?units=metric${latQuery}&APPID=8a72f435201f825883627f2f955cbaa6`
 }
