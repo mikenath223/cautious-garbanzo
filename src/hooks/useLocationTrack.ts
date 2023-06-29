@@ -19,7 +19,7 @@ const getIPAddress = async (setLatLong: setLatLong) => {
   try {
     const data: IPResponse = await fetchIPAddress()
     if (isValid(data)) {
-      const { latitudeData, longitudeData } = data;
+      const { latitude: latitudeData, longitude: longitudeData } = data;
       const latitude =
         isNil(latitudeData) || isNaN(Number(latitudeData)) ? '00' : latitudeData
       const longitude =

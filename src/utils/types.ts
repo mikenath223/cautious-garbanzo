@@ -68,8 +68,8 @@ export interface INote {
 }
 
 export interface IPResponse {
-  latitudeData: number;
-  longitudeData: number;
+  latitude: number;
+  longitude: number;
   city: string;
   region: string;
   country_name: string;
