@@ -47,7 +47,7 @@ export default function Home() {
       <Searchbar />
       {error && (
         <div className="error-search">
-          "There was an error retrieving search result! Please try again"
+          There was an error retrieving search result! Please try again
         </div>
       )}
       <FavCities />

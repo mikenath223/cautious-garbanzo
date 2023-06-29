@@ -5,39 +5,41 @@ exports[`Searchbar should match snapshot 1`] = `
   <section
     class="weather-section"
   >
-    <div
-      class="weather-details"
-    >
-      <h1
-        class="location-name"
+    <div>
+      <div
+        class="weather-details"
       >
-        Lagos
-      </h1>
-      <button
-        class="submit-btn favorites-btn"
-        type="submit"
+        <h1
+          class="location-name"
+        >
+          Lagos
+        </h1>
+        <button
+          class="submit-btn favorites-btn"
+          type="submit"
+        >
+          <span>
+            Add to favorites
+          </span>
+          <img
+            alt=""
+            class="icon-img"
+            src="/assets/icons/unliked.png"
+          />
+        </button>
+      </div>
+      <div
+        class="country-content"
       >
-        <span>
-          Add to favorites
-        </span>
         <img
           alt=""
           class="icon-img"
-          src="/assets/icons/unliked.png"
+          src="/assets/icons/country.png"
         />
-      </button>
-    </div>
-    <div
-      class="country-content flex-center"
-    >
-      <img
-        alt=""
-        class="icon-img"
-        src="/assets/icons/country.png"
-      />
-      <span>
-        NG
-      </span>
+        <span>
+          NG
+        </span>
+      </div>
     </div>
     <ul
       class="details-content"

@@ -14,15 +14,18 @@ export default function FavCities() {
   >("favorite-cities", undefined);
 
   const fetchCities = useCallback(async () => {
-    let cities = await getFavsCityWeather(initFavCities);
-    setFavCitiesTemp(cities);
+    try {
+      let cities = await getFavsCityWeather(initFavCities);
+      setFavCitiesTemp(cities);
+    } catch (error) {}
   }, [setFavCitiesTemp]);
 
+  const isFavoritesExist = favCitiesTemp?.[0]?.name;
   useEffect(() => {
-    if (!favCitiesTemp) {
+    if (!isFavoritesExist) {
       fetchCities();
     }
-  }, [fetchCities, favCitiesTemp]);
+  }, [fetchCities, isFavoritesExist]);
 
   const onRemoveCity = (city: IWeatherInfo) => {
     let filteredCities = favCitiesTemp?.filter(

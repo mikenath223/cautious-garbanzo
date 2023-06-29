@@ -10,7 +10,8 @@
   background-color: var(--bg-orange);
   color: #ffffff;
   width: max-content;
-  margin-top: 0.2rem;
+  margin-top: 0.5rem;
+  margin-inline: auto;
   text-align: center;
 }
 

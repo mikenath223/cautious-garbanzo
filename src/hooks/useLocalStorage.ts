@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 
 type UseLocalStorageResult<T> = [T | undefined, (value: T) => void];
 
@@ -13,14 +13,14 @@ function useLocalStorage<T>(key: string, initialValue?: T): UseLocalStorageResul
     }
   });
 
-  const setValue = (value: T) => {
+  const setValue = useCallback((value: T) => {
     try {
       setStoredValue(value);
       localStorage.setItem(key, JSON.stringify(value));
     } catch (error) {
       console.error(`Error setting value in localStorage for key "${key}":`, error);
     }
-  };
+  }, [key]);
 
   return [storedValue, setValue];
 }

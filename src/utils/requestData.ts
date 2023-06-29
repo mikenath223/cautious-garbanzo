@@ -17,6 +17,7 @@ export const getCityWeather = async (city: string | null = null, isCheckCache: b
     localStorage.setItem(localStorageKey, JSON.stringify(result))
     return result
   } catch (error) {
+    console.log(error)
     const errMsg = `Failed to retrieve ${city?.trim()} data!`
     throw new Error(errMsg)
   }
